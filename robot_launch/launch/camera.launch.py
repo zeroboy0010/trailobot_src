@@ -50,10 +50,10 @@ def generate_launch_description():
             parameters=[{
                 'output_frame': 'camera_link',
                 'range_min': 0.2,
-                'range_max': 3.0,
-                'scan_time': 0.033,
+                'range_max': 2.5,
+                'scan_time': 0.1,
                 'update_rate': 10.0,
-                'scan_height': 1,
+                'scan_height': 10,
             }]
     )
     depthimage_to_laserscan_2 = Node(
