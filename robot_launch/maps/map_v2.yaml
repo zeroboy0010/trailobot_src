@@ -1,4 +1,4 @@
-image: /home/zero/Desktop/Workspace/AGV_Robot/ros2_ws/src/robot_launch/maps/map_v2_.pgm
+image: /home/pi/ros2_ws/src/robot_launch/maps/map_v3_.pgm
 mode: trinary
 resolution: 0.05
 origin: [-11.8, -10.7, 0]

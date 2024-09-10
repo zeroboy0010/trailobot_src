@@ -71,7 +71,7 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='static_transform_publisher',
-        arguments=['0.3', '0', '0', '0', '3.14', '-3.14', 'base_link', 'laser'],
+        arguments=['0.36', '0', '0', '0', '3.14', '-3.14', 'base_link', 'laser'],
     )
 
     TF2_camera_node = Node(
@@ -140,6 +140,19 @@ def generate_launch_description():
                 'scan_height': 1,
             }]
     )
+    udp_micro_ros = Node(
+            package='micro_ros_agent',
+            executable='micro_ros_agent',
+            name='micro_ros_agent',
+            namespace='micro_ros_agent',
+            parameters=[],  # Add parameters if needed
+            arguments=[
+                'udp4', '--port', '8888', '-v6'
+            ],
+            output = 'screen'
+
+        )
+
 
     ld = LaunchDescription()
     
@@ -160,5 +173,7 @@ def generate_launch_description():
     # ld.add_action(TF2_camera_node)
     ld.add_action(joy_convert)
     ld.add_action(micro_ros)
+
+    ld.add_action(udp_micro_ros)
 
     return ld

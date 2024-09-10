@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-package_name = 'robot_path_generate'
+package_name = 'udp_to_goal'
 
 setup(
     name=package_name,
@@ -20,8 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'path_generator_node = robot_path_generate.path_generator_node:main',
-            'cubic_spline_node = robot_path_generate.cubic_spline_pub:main',
+            'udp_to_goal_node = udp_to_goal.udp_to_goal_node:main',
         ],
     },
 )

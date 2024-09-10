@@ -10,8 +10,6 @@ from time import time,sleep
 
 import math
 import numpy as np
-import casadi as ca
-from casadi import sin, cos, pi, arctan2
 
 ## complimentary filter 
 delta = 0.90
